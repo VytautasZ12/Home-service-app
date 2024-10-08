@@ -1,4 +1,5 @@
-import styles from "./Topbar.module.css";
+import Button from "../common/Button";
+import styles from "./Topbar.module.scss";
 
 const Topbar = () => {
   const links = [
@@ -28,7 +29,7 @@ const Topbar = () => {
         </nav>
       </div>
       <div className={styles.rightside}>
-        {/* <Button>Login / Sign Up</Button> */}
+        <Button>Login / Sign Up</Button>
       </div>
     </div>
   );
