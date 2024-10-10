@@ -1,4 +1,5 @@
 import Hero from "./components/home/Hero";
+import CategoryList from "./components/home/CategoryList";
 import Topbar from "./components/layout/Topbar";
 
 const App = () => {
@@ -6,6 +7,7 @@ const App = () => {
     <>
       <Topbar />
       <Hero />
+      <CategoryList />
     </>
   );
 };

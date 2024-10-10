@@ -1,3 +1,5 @@
+import styles from "./CategoryList.module.scss";
+
 const CategoryCard = ({ category }) => {
   const { name, icon } = category;
   const Icon = icon;
@@ -5,7 +7,7 @@ const CategoryCard = ({ category }) => {
   return (
     <div className={styles.card}>
       <Icon fontSize={48} color={category.color} />
-      <p className={styles.card}></p>
+      <p className={styles.card}>{name}</p>
     </div>
   );
 };
