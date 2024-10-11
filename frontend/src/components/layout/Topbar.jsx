@@ -1,38 +1,42 @@
+import { useNavigate, Link } from "react-router-dom";
+import { ROUTES } from "../../router/consts";
 import Button from "../common/Button";
 import styles from "./Topbar.module.scss";
+import Logo from "../../assets/logo.svg";
 
 const Topbar = () => {
+  const navigate = useNavigate();
   const links = [
     {
-      href: "#",
+      href: "ROUTES.HOME",
       label: "Home",
     },
     {
-      href: "#",
+      href: "ROUTES.SERVICES",
       label: "Services",
     },
     {
-      href: "#",
+      href: "ROUTES.ABOUT_US",
       label: "About Us",
     },
   ];
   return (
-    <div className={styles.topbar}>
+    <header className={styles.topbar}>
       <div className={styles.leftside}>
-        <img src="./logo.svg" alt="logo" />
-        <nav className={styles.naigation}>
+        <Link to={ROUTES.HOME}>
+          <img src={Logo} alt="logo" />
+        </Link>
+        <nav className={styles.navigation}>
           {links.map((link) => (
-            <a key={link.label} href={link.href} className={styles.link}>
+            <Link key={link.label} to={link.href} className={styles.link}>
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
       </div>
       <div className={styles.rightside}>
-        <Button>Login / Sign Up</Button>
+        <Button onClick={() => navigate(ROUTES.LOGIN)}>Login / Sign Up</Button>
       </div>
-    </div>
+    </header>
   );
 };
-
-export default Topbar;
