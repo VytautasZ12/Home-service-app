@@ -6,7 +6,6 @@ const CategoryCard = ({ category }) => {
 
   return (
     <div className={styles.card}>
-      <Icon fontSize={48} color={category.color} />
       <UrlIcon
         url={category.url}
         style={{ width: 48, height: 48, backgroundColor: category.color }}
