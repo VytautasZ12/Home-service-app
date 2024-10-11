@@ -40,3 +40,5 @@ const Topbar = () => {
     </header>
   );
 };
+
+export default Topbar;
