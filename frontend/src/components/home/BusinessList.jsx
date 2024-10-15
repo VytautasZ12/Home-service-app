@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import { businesses } from "@/consts/business";
+import BusinessCard from "./BusinessCard";
 import styles from "./BusinessList.module.scss";
 
 const BusinessList = ({ category, className }) => {
