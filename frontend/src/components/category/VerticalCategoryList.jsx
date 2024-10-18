@@ -1,8 +1,8 @@
 import { categories } from "@/consts/category";
 import CategoryCard from "./CategoryCard";
-import styles from "./VerticalCategory.module.scss";
+import styles from "./VerticalCategoryList.module.scss";
 
-const VerticalCategory = () => {
+const VerticalCategoryList = () => {
   return (
     <div>
       <h2 className={styles.title}>Categories</h2>
@@ -13,4 +13,4 @@ const VerticalCategory = () => {
   );
 };
 
-export default VerticalCategory;
+export default VerticalCategoryList;
